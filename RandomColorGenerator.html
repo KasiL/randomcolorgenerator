@@ -2,40 +2,51 @@
 <html>
 
 <head>
-    <meta charset= 'UTF8'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Random Color Picker</title>
     <style type="text/css">
     #color {
         height: 400px;
-        width: 700px;
         border: 1px solid #000;
         background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     button {
-        margin-top: 20px;
+        padding: 15px;
+
+        &:hover{
+            background-color: 'red';
+            color: #fff;
+        }
     }
     </style>
 </head>
 
 <body>
     <h1>Random Color Generator</h1>
-    <div id="color">
+    <div id="color" class="xs-col-12">
+        <button type="button" id="clicky" class="btn btn-default"> Random Color</button>
     </div>
-    <button id="clicky"> Random Color</button>
     <script type="text/javascript">
     //create an array
     //randomly add numbers & characters
     //loop through until 6 digits are created
     //concatenate the string
     //set the div's background color to the string
-    document.getElementById('clicky').onclick = function(){ colorgenerator()};
+    document.getElementById('clicky').onclick = function() {
+        colorgenerator()
+    };
 
     function colorgenerator() {
         var randomNumber = Math.floor(Math.random() * 10);
         var letters = ['a', 'b', 'c', 'd', 'e', 'f', randomNumber];
         var bgColor = '#';
-        
+
         // console.log(randomNumber);
 
         for (var i = 0; i < 6; i++) {
@@ -43,7 +54,7 @@
             bgColor += letters[randomLetter];
         }
         // console.log(bgColor);
-        document.getElementById('color').style.backgroundColor =  bgColor;
+        document.getElementById('color').style.backgroundColor = bgColor;
     }
     </script>
 </body>
