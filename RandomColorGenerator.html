@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title> Random Color Picker</title>
     <style type="text/css">
     #color {
@@ -16,10 +17,9 @@
         justify-content: center;
     }
     
-    button {
+    #clicky {
         padding: 15px;
-
-        &:hover{
+        &:hover {
             background-color: 'red';
             color: #fff;
         }
@@ -29,8 +29,12 @@
 
 <body>
     <h1>Random Color Generator</h1>
-    <div id="color" class="xs-col-12">
-        <button type="button" id="clicky" class="btn btn-default"> Random Color</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="color" class="xs-col-12">
+                <button type="button" id="clicky" class="btn btn-default"> Random Color</button>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
     //create an array
